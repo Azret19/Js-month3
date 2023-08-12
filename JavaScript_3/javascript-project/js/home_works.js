@@ -3,7 +3,7 @@ const gmailCheck = document.querySelector('#gmail_button')
 const gmailResult = document.querySelector('#gmail_result')
 
 
-const regExp1 = /^[a-zA-Z0-9\-_.]+@gmail.com$/
+const regExp1 = /^[a-zA-Z0-9\-_.]+@gmail\.com$/
 
 gmailCheck.onclick = () => {
     if (regExp1.test(gmailInput.value)) {
