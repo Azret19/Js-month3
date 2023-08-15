@@ -69,7 +69,8 @@
 .time_block {
     display: flex;
     width: 500px;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .stopwatch {
