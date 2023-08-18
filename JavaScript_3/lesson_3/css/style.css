@@ -1,0 +1,23 @@
+.btn-block {
+    width: 100%;
+    margin: 0 auto;
+    height: 100px;
+    background-color: silver;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+button {
+    width: 150px;
+    height: 60px;
+    background-color: yellow;
+    border: none;
+    cursor: pointer;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

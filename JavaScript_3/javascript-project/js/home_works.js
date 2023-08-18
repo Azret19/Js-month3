@@ -15,7 +15,7 @@ gmailCheck.onclick = () => {
     }
 }
 
-// const parentBlock = document.querySelector('.parent_block')
+
 const box = document.querySelector('.child_block')
 
 let PositionX = 0
@@ -84,34 +84,3 @@ buttonStart.onclick = () => {
     }
 }
 
-
-
-
-
-
-// buttonReset.onclick = () => {
-//     seconds.innerHTML = '0'
-//     secondsTime = 0
-//     clearInterval(interval)
-//             buttonResume.onclick = () => {
-//                 clearInterval(interval)
-//                 interval = setInterval(startTime, 1000)
-//                 buttonStart.onclick = buttonStop
-//     }
-// }
-
-
-
-// buttonStart.onclick = () => {
-//     clearInterval(interval)
-//     interval = setInterval(startTime, 1000)
-//     buttonStart.onclick = buttonStop
-//     buttonStop.onclick = () => {
-//         clearInterval(interval)
-//         buttonResume.onclick = () => {
-//             clearInterval(interval)
-//             interval = setInterval(startTime, 1000)
-//             buttonReset.onclick = buttonStop
-//         }
-//     }
-// }
