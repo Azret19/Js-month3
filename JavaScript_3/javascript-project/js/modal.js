@@ -27,19 +27,3 @@ function showModal() {
 }
 window.addEventListener('scroll', showModal)
 
-
-
-// window.addEventListener('scroll', (e) => {
-//     let scrollEnd = window.scrollY
-//     console.log(scrollEnd)
-//
-//     if (e.target === modal) {
-//
-//     }
-// })
-
-
-
-// modal.removeEventListener('scrollTop',() => {
-//
-// })
