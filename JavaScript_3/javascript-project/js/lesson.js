@@ -101,55 +101,45 @@ convert(eur,[som,usd])
 
 
 
+const card = document.querySelector('.card')
+const btnPrev = document.querySelector('#btn-prev')
+const btnNext = document.querySelector('#btn-next')
+let count = 1
 
+btnNext.onclick = () => {
+    count++
+    if (count <= 200){
 
+    }else {
+        count = 1
+    }
+    fetchData()
+}
 
+const fetchData = () => {
+    fetch(`https://jsonplaceholder.typicode.com/todos/${count}`)
+        .then(response => response.json())
+        .then(data => {
+            card.innerHTML = `
+        <p>${data.title}<p>
+        <p style="color:${data.completed ? 'green' : 'red'}">${data.completed}<p>
+        <span>${data.id}<span>
+        `
+        })
+}
+fetchData()
 
+btnPrev.onclick = () => {
+    count--
+    if (count < 1){
+        count = 200
+    }
+    fetchData()
+}
 
-
-
-
-// if (target2 === 'som') {
-//     e.value = (elem.value / response[e.id]).toFixed(2)
-// }
-// else
-
-// const som = document.querySelector('#som')
-// const usd = document.querySelector('#usd')
-// const eur = document.querySelector('#eur')
-//
-//
-// const converter = (element, target, target2, isTrue) => {
-//     element.oninput= () => {
-//         const request = new XMLHttpRequest()
-//         request.open("GET", "../data/converter.json")
-//         request.setRequestHeader("Content-type", "application/json")
-//         request.send()
-//         request.onload = () => {
-//         const response = JSON.parse(request.response)
-//             if (isTrue) {
-//                 target.value = (element.value / response.usd).toFixed(2)
-//                 target2.value = (element.value / response.eur).toFixed(2)
-//                 //Конвертер сома
-//             }
-//             else if (isTrue) {
-//                 target.value = (element.value * response.eur).toFixed(2)
-//                 target2.value = ((element.value * response.eur) / response.usd).toFixed(2)
-//                 //Конвертер евро
-//             }
-//             else {
-//                 target.value = (element.value * response.usd).toFixed(2)
-//                 target2.value = ((element.value * response.usd) / response.eur).toFixed(2)
-//                 //Конвертер доллара
-//             }
-//                 element.value === '' && (target.value = '')
-//                 element.value === '' && (target2.value = '')
-//         }
-//     }
-// }
-// converter(som, usd, eur,true)
-// converter(eur, som, usd,false)
-// converter(usd, som, eur,false)
+fetch(`https://jsonplaceholder.typicode.com/posts`)
+    .then((response) => response.json())
+    .then(data => console.log(data))
 
 
 
