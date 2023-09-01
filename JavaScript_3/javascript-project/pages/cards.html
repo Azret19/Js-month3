@@ -2,10 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home Works</title>
+    <title>Title</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/core.css">
-    <link rel="stylesheet" href="../css/home_works.css">
+    <style>
+        .cardData {
+            margin-bottom: 50px;
+            margin-top: 50px;
+            width: 600px;
+            height: 700px;
+            padding: 5px;
+            border: 1px solid;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+            background-color: darkslategray;
+        }
+        .cards {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            padding: 100px 0;
+            background: black;
+            gap: 90px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 
@@ -15,7 +40,7 @@
             <div class="inner_header">
                 <a href="../index.html">
                     <div class="logotype">
-                        <h2>Java<span>Script</span></h2>
+                        <h2>JavaScript</h2>
                     </div>
                 </a>
                 <ul class="menu">
@@ -36,49 +61,7 @@
             </div>
         </div>
     </div>
-    <div class="gmail_block">
-        <div class="container">
-            <h3>Home work 1 (part 1)</h3>
-            <div class="inner_gmail_block">
-                <div class="form_gmail">
-                    <label for="gmail_input"></label>
-                    <input type="text" id="gmail_input" placeholder="your gmail">
-                    <button class="btn" id="gmail_button">Check gmail</button>
-                    <span class="checker" id="gmail_result"></span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="move_block">
-        <div class="container">
-            <h3>Home work 1 (part 2)</h3>
-            <div class="inner_move_block">
-                <div class="parent_block">
-                    <div class="child_block"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="stopwatch">
-        <div class="container">
-            <h3>Home work 2 </h3>
-            <div class="time">
-                <div class="time_block">
-<!--                    <div class="interval" id="minutes">00</div>-->
-<!--                    <div class="break">:</div>-->
-                    <div class="interval" id="seconds">0</div>
-<!--                    <div class="break">:</div>-->
-<!--                    <div class="interval" id="ml-seconds">00</div>-->
-                </div>
-            </div>
-            <div class="time_buttons">
-                <button class="btn" id="start">Start</button>
-                <button class="btn" id="stop">Stop</button>
-                <button class="btn" id="reset">Reset</button>
-                <button class="btn" id="resume">Resume</button>
-            </div>
-        </div>
-    </div>
+    <div class="cards"></div>
     <div class="footer">
         <div class="container">
             <a href="https://www.instagram.com/nurdinbuy/" target="_blank">
@@ -89,22 +72,20 @@
         </div>
     </div>
 </div>
-
 <div class="modal">
     <div class="modal_dialog">
         <div class="modal_content">
             <form action="#">
                 <div class="modal_close">&times;</div>
                 <div class="modal_title">Мы свяжемся с вами как можно быстрее!</div>
-                <input required placeholder="Ваше имя" name="name" type="text" class="modal_input">
+                <input required placeholder="Ваше имя" name="full_name" type="text" class="modal_input">
                 <input required placeholder="Ваш номер телефона" name="phone" type="phone" class="modal_input">
                 <button class="btn btn_dark btn_min">Перезвонить мне</button>
             </form>
         </div>
     </div>
 </div>
-
 </body>
-<script src="../js/home_works.js"></script>
+<script src="../js/cards.js"></script>
 <script src="../js/modal.js"></script>
 </html>
